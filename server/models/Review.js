@@ -2,7 +2,7 @@ const {Schema} = require('mongoose');
 
 const reviewSchema = new Schema(
     {
-        title: {
+        name: {
             type: String,
             required: true
         },
@@ -12,6 +12,14 @@ const reviewSchema = new Schema(
         },
         score: {
             type: Number,
+            required: true
+        },
+        price: {
+            type: Float32Array,
+            required: true
+        },
+        location: {
+            type: String,
             required: true
         }
     }
