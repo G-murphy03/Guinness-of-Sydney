@@ -39,12 +39,28 @@ const resolvers = {
       return { token, user };
     },
     addReview: async (parent, { Review }, context) => {
-      const user = checkAuth(context);
+      if (context.user) {
+        const review = await Review.create({
+          pubName,
+          review,
+          score,
+          price,
+          location,
+          reviewer: context.user.username,
+        });
 
-      const newReview = new Review();
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { reviews: review._id } }
+        );
 
-      return newReview;
+        return review;
+      }
+      throw new AuthenticationError('You need to be logged in!');
     },
-    removeReview: async (parent, { bookId }, context) => {},
+  },
+
+  removeReview: async (parent, { reviewId }) => {
+    return Review.findOneAndDelete({ _id: reviewId });
   },
 };

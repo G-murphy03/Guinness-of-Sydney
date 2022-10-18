@@ -5,6 +5,10 @@ const reviewSchema = new Schema({
     type: String,
     required: true,
   },
+  reviewer: {
+    type: String,
+    required: true,
+  },
   pubName: {
     type: String,
     required: true,
