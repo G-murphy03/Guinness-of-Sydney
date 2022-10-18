@@ -1,5 +1,6 @@
 import React from 'react';
 
+// TODO: Work on CSS
 const Home = () => {
     return (
         <div>
@@ -13,23 +14,27 @@ const Home = () => {
             </div>
             <div className='the-perfect-pour'>
                 <h1>The Perfect Pour</h1>
-                {/* <img></img> */}
+                <img src={require('../assets/step-one.png')}></img>
                 <p className='step-one'>
                     What does it take to create the perfect pour?
                     Well, first you must prepare a glass. A nice, tall Guinness glass is best.
                 </p>
+                <img src={require('../assets/step-two.png')}></img>
                 <p className='step-two'>
                     Tilt the glass. A good Guinness starts at an angle of 45 degrees.
                 </p>
                 <p className='step-three'>
-                    Pour. That's it, just pour. Pour until you reach the top of the harp logo.
+                    Pour. That's it, just pour. Pour until you fill the glass 3/4 full.
                 </p>
+                <img src={require('../assets/step-four.png')}></img>
                 <p className='step-four'>
                     Now let it settle. Resist your temptation to drink. But only for a ninety-two and a half seconds.
                 </p>
+                <img src={require('../assets/step-five.png')}></img>
                 <p className='step-five'>
                     The glass isn't full yet. Time to top up.
                 </p>
+                <img src={require('../assets/step-six.png')}></img>
                 <p className='step-six'>
                     Perfection.
                 </p>
