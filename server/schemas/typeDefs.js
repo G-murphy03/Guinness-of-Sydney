@@ -31,20 +31,9 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addReview(
-      pubName: String!
-      review: String!
-      score: Int!
-      price: Float!
-      location: String!
-    ): Review
-    updateReview(
-      pubName: String!
-      review: String!
-      score: Int!
-      price: Float!
-      location: String!
-    ): Review
+
+    addReview(pubName: String!, review: String!, score: Int!, price: Float!, location: String!): Review
+    updateReview(pubName: String!, review: String!, score: Int!, price: Float!, location: String!): Review
     removeReview(reviewId: ID!): Review
   }
 `;
