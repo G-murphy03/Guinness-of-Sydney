@@ -5,10 +5,11 @@ const typeDefs = gql`
     _id: ID!
     username: String!
     email: String!
-    reviewCount: [Review]
+    reviews: [Review]
   }
   type Review {
     _id: ID!
+    reviewer: String!
     pubName: String!
     review: String!
     score: Int!
