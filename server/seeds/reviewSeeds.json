@@ -1,6 +1,5 @@
 [
     {
-    "reviewId": "1",
     "pubName": "Platform 62",
     "review": "Platform 62 in  is just tucked in behind Mascot station. It is a great little spot to stop in on the way home from work for a sneaky pint. The head on the pint was a bit too small, the taste was bitter at first but got a little better with a few more sips.",
     "score": "5",
@@ -8,7 +7,6 @@
     "location": "Mascot"
 },
 {
-    "reviewId": "2",
     "pubName": "Forresters",
     "review": "Forresters is a lively corner pub with a great buzz. We went on a Friday and the place was packed with people getting their weekend off to a good start. The pint had a lovely smooth and creamy texture. If were being a little over critical it just lacked a bit of domage but with really friendly staff and a great pint we recommend taking a trip here.",
     "score": "8",
@@ -16,7 +14,6 @@
     "location": "Surry Hills"
 },
 {
-    "reviewId": "3",
     "pubName": "The Village Inn",
     "review": "The Village Inn, formerly known as Durty Nelly’s, is a busy little corner pub with a great atmosphere ideal for meeting up with friends to enjoy a few pints. Just make sure the pints are not Guinness! It was very watery, bitter and left a bad aftertaste and there was no lacing on the glass. This one was a bit of a struggle to finish but hey that’s all part of journey to find Sydney’s finest Guinne.",
     "score": "2",
@@ -25,7 +22,6 @@
 
 },
 {
-    "reviewId": "4",
     "pubName": "The Angel hotel",
     "review": "The Angel hotel on Pitt Street is the perfect spot for an after dinner or after work drink. This pub is full of character, but unfortunately had a bit of a musty smell up stairs… maybe the carpets need a clean. Besides that, the staff were great and very friendly. The pint tasted nice, it lacked creaminess but it was still nice to drink! At $12.50 a pint, it wasn’t too bad considering the great location.",
     "score": "7",
@@ -33,7 +29,6 @@
     "location": "CBD"
 },
 {
-    "reviewId": "5",
     "pubName": "The Fiddler",
     "review": "The Fiddler is an institution for drinkers in Western Sydney. We sat in the old Irish pub which has been there since the 1820s. It’s a beautiful pub with lovely little snugs to sit in and really reminded us of a pub in Ireland. The service was great and the pints were brought to our table. The pint looked lovely although it had a shamrock in the head which we’re not big fans of. It tasted really good and the only criticism is it was slightly watery. Delighted we made the trip out West to try it and at such a reasonable price we recommend others do the same.",
     "score": "8",
@@ -41,7 +36,6 @@
     "location": "Rouse Hill"
 },
 {
-    "reviewId": "6",
     "pubName": "Ashfield Hotel",
     "review": "The Ashfield Hotel is a typical Aussie pub with friendly staff and a big bistro, the pub is nice but it’s lacking a little bit character. The bar staff brought the pints to our table, which was good service. The head of the pint itself was too big and lacked domeage but it tasted pretty good, it had a nice bit of cream to it! At $9.70 it’s a little easier on the wallet. The Ashfield Hotel is a good spot to pop in to on the way home from work for a pint, we would be happy to come here again",
     "score": "7",
@@ -49,7 +43,6 @@
     "location": "Ashfield"
 },
 {
-    "reviewId": "7",
     "pubName": "New Hampton Hotel",
     "review": "New Hampton Hotel in Kings Cross is a pub with a really chilled out vibe. The staff were very friendly, they told us to sit down and they’d bring the pints over to us, which we love. The pint looked good even though it didn’t have much of a dome. It tasted nice but could’ve done with a bit more creaminess to it. In saying that, it’s not a bad little spot to try out when you’re in the Cross.",
     "score": "7",
@@ -57,7 +50,6 @@
     "location": "Kings Cross"
 },
 {
-    "reviewId": "8",
     "pubName": "The London Hotel",
     "review": "The London Hotel is a nice little pub that serves good food, tucked away in Paddington. The pint looked okay but the head was a bit small and there was no dome. It tasted fairly good but you might want to sit down for the next part… They charge a whopping 15 dollars a pint! At the dearest we’ve had so far we don’t know if it’s the fact that they’re in an affluent area or that they’re smoking crack but that is just outrageous. If you’re after a Guinness there are way better pints around, much more reasonably priced. We’d only recommend going here for a pint if you’ve money to burn",
     "score": "3",
@@ -65,7 +57,6 @@
     "location": "Paddington"
 },
 {
-    "reviewId": "9",
     "pubName": "Frank Mac's",
     "review": "Frank Mac's in The Rocks is a new gin and cocktail bar, and the sister bar of The Doss House. This old sandstone building is a great place to enjoy drinks with friends and soak up the atmosphere. The pint looked and tasted great, was very smooth with a lovely creaminess to it but it was too cold for our liking. A great spot to pop into while strolling around The Rocks",
     "score": "8",
@@ -73,7 +64,6 @@
     "location": "The Rocks"
 },
 {
-    "reviewId": "10",
     "pubName": "The Orient Hotel",
     "review": "The Orient Hotel in The Rocks is the perfect place for a fun night at the weekend. With live music and DJs it’s always a good spot with a group of mates. The pint was served in a plastic glass, and while we understand this could be down to licensing rules we’re just not fans. It wasn’t filled to the top so there was absolutely no dome. It tasted okay but was too watery",
     "score": "2",
@@ -81,7 +71,6 @@
     "location": "The Rocks"
 },
 {
-    "reviewId": "11",
     "pubName": "The Regent",
     "review": "The Regent in Redfern is a small sports bar with an RSL feel to it, complete with it’s own taco bar called Taco Anonymous.They only recently got Guinness on tap so we thought we’d pop in and try it out. The pint lacked creaminess and had a bit of a big head but it was still a nice drop. Before we went we didnt realise it was happy hour but were delighted when our pints were only $7 making it the cheapest we’ve paid so far, and with their normal price at $10 it isn’t bad either. They run happy hour 4-7 pm, Mon-Fri so if you’re in the area pop in and give it a go",
     "score": "7",
@@ -89,7 +78,6 @@
     "location": "Redfern"
 },
 {
-    "reviewId": "12",
     "pubName": "The Doss House",
     "review": "The Doss House is one of our favourite bars in Sydney. It’s a beautiful heritage listed building, steeped in history and it’s a must visit for whiskey lovers! We have gotten a lot of mixed reviews about the pints at The Doss House from our followers, so we were curious to suss it out for ourselves.We sat outside and had to order our pints from the barcode on the table. Now, call us old fashioned but we would much prefer to order at the bar and chat to the bar staff, but we didn’t have a booking and that’s just the times we are living in. It didn’t take long for our pints to be brought to our table and they looked really nice. The pints were decent, lacked a little creaminess but were a solid 7. We would definitely recommend a trip to the Doss House, whatever your poison, it’s a great spot! We know we’ll definitely be back",
     "score": "7",
@@ -97,7 +85,6 @@
     "location": "The Rocks"
 },
 {
-    "reviewId": "13",
     "pubName": "Sydney Park Hotel",
     "review": "Sydney Park Hotel in Newtown is a beautiful pub with a long narrow bar area that reminds us of a lot of pubs in Ireland. They also have an old school Guinness tap which is rare is Aus. The staff were on the ball, we paid for our pints and were told to sit anywhere and they’d find us. The pint looked the part and tasted lovely. Our only criticism is that it was it was too cold and slightly watery. Still a great pint and we’d definitely recommend a trip to SPH.",
     "score": "8",
@@ -105,7 +92,6 @@
     "location": "Newton"
 },
 {
-    "reviewId": "14",
     "pubName": "Hotel Sweeney",
     "review": "@hotelsweeneys in Sydney CBD is a nice little pub with a great roof top beer garden, perfect for Friday after work drinks. The barman told us he always pours Guinness right and it was on point but it wasn’t in a Guinness glass or a tulip glass. It tasted nice but just lacked something. The price point is on the higher end of the scale by a of couple dollars compared to others pubs nearby. That being said we are wouldn’t rule out popping in for a try if you’re in the city",
     "score": "6",
@@ -113,7 +99,6 @@
     "location": "CBD"
 },
 {
-    "reviewId": "15",
     "pubName": "The Henson",
     "review": "The Henson is an old style pub with a great vibe. They’ve a huge beer garden, which is child and dog friendly, and there’s an old school arcade too. The staff instantly made us feel welcome and Chris behind the bar was happy to bring our pints to our table. The Guinness looked good despite there being a little nipple on the head. The taste was amazing, very creamy, no bitterness and the right temperature. This is up there with some of the best we’ve had",
     "score": "9",
@@ -121,7 +106,6 @@
     "location": "Marrickville"
 },
 {
-    "reviewId": "16",
     "pubName": "General Bourke Hotel",
     "review": "The General Bourke is a modern style pub, it says it’s an Irish pub but on the inside doesn’t resemble it. We went after work on a Friday and the place was buzzing with people. The staff didn’t know how to pour the pint properly, it tasted average. The price of the pint is good but the Guinness needs improvement",
     "score": "4",
@@ -129,7 +113,6 @@
     "location": "Parramatta"
 },
 {
-    "reviewId": "17",
     "pubName": "The Banksia Hotel",
     "review": "Banksia Hotel on Princes Highway is a modern pub with a great bistro. The food was delicious with big portions, and if you’re craving Irish deli coleslaw it’s a must! Now onto the Guinness - after the second pour when it was settling and just starting to dome the bar staff tipped it out to make the head more flat. It took away from what was an already great looking pint. Aside from this it was still a tasty pint so we’d definitely recommend dropping in for a few scoops and a good feed.",
     "score": "7",
@@ -137,7 +120,6 @@
     "location": "Banksia"
 },
 {
-    "reviewId": "18",
     "pubName": "PJ P'Briens Sydney",
     "review": "Pjs is a regular for many after work drinks in the CBD and it’s no surprise why. It has a great atmosphere and nice Guinness.",
     "score": "7/10",
@@ -145,7 +127,6 @@
     "location": "CBD"
 },
 {
-    "reviewId": "19",
     "pubName": "Phillips Foote",
     "review": "So...    We were handed a can and a schooner glass. Enough said! Our pours weren’t the best either ",
     "score": "1",
@@ -153,7 +134,6 @@
     "location": "The Rocks"
 },
 {
-    "reviewId": "20",
     "pubName": "Jimmy's Bar and Restaurant",
     "review": "Jimmy's is a great little Irish pub on Frenchman’s road. There’s a proper Irish buzz in Jimmy’s with great staff that know their way around a pint of the black stuff. The Guinness is smooth and creamy. Top of the list so far, it will take a serious pint to beat this one!",
     "score": "9/10",
@@ -161,7 +141,6 @@
     "location": "Randwick"
 },
 {
-    "reviewId": "21",
     "pubName": "Glasgow Arms Hotel",
     "review": "Glasgow Arms Hotel in Ultimo. This was a crime against Guinness. The bar staff openly admitted how little they knew about pouring Guinness and it showed! We honestly didn’t even want to drink it but had to take one for the team 😂 It was so watery and tasted awful. The first time we couldn’t finish one.",
     "score": "0",
@@ -169,7 +148,6 @@
     "location": "Ultimo"
 },
 {
-    "reviewId": "22",
     "pubName": "The Gaelic Club",
     "review": "Do yourself a favour and get down to The Gaelic Club on a Friday night. This hidden gem serves a one of the best pints around. The bar staff know how to pour a creamy pint and be sure you get yourself one of their toasties to go with it! If you can play an instrument or carry a tune you can join in with the trad session or just sit back, enjoy the music and enjoy the little piece of home",
     "score": "9",
@@ -177,7 +155,6 @@
     "location": "Surry Hills"
 },
 {
-    "reviewId": "23",
     "pubName": "Molly Malone's Irish Tavern",
     "review": "Molly Malones has a great buzz on a Friday. It was full of people finishing off their work week and they had live music too. The Guinness was nice, not the best but not the worst. We’d be open to go back for a few more",
     "score": "6",
