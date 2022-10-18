@@ -9,7 +9,7 @@ const Home = () => {
                 <img src={require('../assets/guinness-beer.png')}></img>
                 <p>
                     Guinness of Sydney serves to review beers in pubs all over Sydney. Specifically, Guinness beers.
-
+                    Each Guinness Beer is served differently, so our goal is to travel all over Sydney, all for the sake of judging Guinness beers.
                 </p>
             </div>
             <div className='the-perfect-pour'>
