@@ -23,7 +23,7 @@ const Home = () => {
           What does it take to create the perfect pour? Well, first you must
           prepare a glass. A nice, tall Guinness glass is best.
         </p>
-        <img src={require('../assets/step-two.png')} alt=''></img>
+        <img src={require('../assets/step-two.jpg')} alt=''></img>
         <p className='step-two'>
           Tilt the glass. A good Guinness starts at an angle of 45 degrees.
         </p>
@@ -35,9 +35,9 @@ const Home = () => {
           Now let it settle. Resist your temptation to drink. But only for a
           ninety-two and a half seconds.
         </p>
-        <img src={require('../assets/step-five.png')} alt=''></img>
+        <img src={require('../assets/step-five.jpg')} alt=''></img>
         <p className='step-five'>The glass isn't full yet. Time to top up.</p>
-        <img src={require('../assets/step-six.png')} alt=''></img>
+        <img src={require('../assets/step-six.jpg')} alt=''></img>
         <p className='step-six'>Perfection.</p>
       </div>
       <div>
