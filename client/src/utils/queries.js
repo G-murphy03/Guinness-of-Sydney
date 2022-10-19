@@ -34,11 +34,11 @@ export const QUERY_REVIEWS = gql`
 export const QUERY_SINGLE_REVIEW = gql`
   query getSingleReview($reviewId: ID!) {
     review(reviewId: $reviewId) {
-        pubName
-        review
-        score
-        price
-        location
+      pubName
+      review
+      score
+      price
+      location
     }
   }
 `;
@@ -57,6 +57,7 @@ export const QUERY_ME = gql`
           price
           location
         }
+      }
     }
   }
 `;
