@@ -27,14 +27,15 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
   },
-  
-  Mutations: {
-    addUser: async (parent, args) => {
-      const user = await User.create(args);
+
+  Mutation: {
+    addUser: async (parent, { username, email, password }) => {
+      const user = await User.create({ username, email, password });
       const token = signToken(user);
 
       return { token, user };
     },
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
       if (!user) {
@@ -50,9 +51,10 @@ const resolvers = {
 
       return { token, user };
     },
-    addReview: async (parent, { Review }, context) => {
+
+    addReview: async (parent, { pubName, review, score, price, location }, context) => {
       if (context.user) {
-        const review = await Review.create({
+        const beerReview = await Review.create({
           pubName,
           review,
           score,
@@ -66,15 +68,51 @@ const resolvers = {
           { $addToSet: { reviews: review._id } }
         );
 
-        return review;
+        return beerReview;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
   },
 
-  removeReview: async (parent, { reviewId }) => {
-    return Review.findOneAndDelete({ _id: reviewId });
+  updateReview: async (parent, { reviewId, pubName, review, score, price, location }, context) => {
+    if (context.user) {
+      return Review.findOneAndUpdate(
+        { _id: reviewId },
+        { 
+          $addToSet: 
+          {
+          pubName,
+          review,
+          score,
+          price,
+          location,
+          reviewer: context.user.username,
+          }
+        },
+        {
+          new: true,
+        }
+      );
+    }
+    throw new AuthenticationError('You need to be logged in!');
   },
+
+  removeReview: async(parent, { reviewId }, context) => {
+    if (context.user) {
+      const beerReview = await Review.findOneAndDelete({
+        _id: reviewId,
+        reviewer: context.user.username,
+      });
+
+      await User.findOneAndUpdate(
+        { _id: context.user._id },
+        { $pull: { reviews: review._id } }
+      );
+
+      return beerReview;
+    }
+    throw new AuthenticationError('You need to be logged in!');
+  }
 };
 
 module.exports = resolvers;
