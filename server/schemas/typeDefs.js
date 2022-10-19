@@ -18,13 +18,13 @@ const typeDefs = gql`
   }
   type Auth {
     token: ID!
-    user: [User]
+    user: User
   }
   type Query {
     users: [User]
     user(username: String!): User
-    review(username: String): [Review]
     review(reviewId: ID!): Review
+    reviews: [Review]!
     me: User
   }
 
@@ -37,3 +37,5 @@ const typeDefs = gql`
     removeReview(reviewId: ID!): Review
   }
 `;
+
+module.exports = typeDefs;

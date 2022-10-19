@@ -19,9 +19,7 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: true,
-      validate: {
-        len: [8],
-      },
+      minlength: [8],
     },
     reviews: [
       {
