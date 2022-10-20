@@ -27,6 +27,7 @@ export const QUERY_REVIEWS = gql`
       score
       price
       location
+      reviewer
     }
   }
 `;
@@ -39,6 +40,7 @@ export const QUERY_SINGLE_REVIEW = gql`
       score
       price
       location
+      reviewer
     }
   }
 `;
@@ -56,6 +58,7 @@ export const QUERY_ME = gql`
         score
         price
         location
+        reviewer
       }
     }
   }

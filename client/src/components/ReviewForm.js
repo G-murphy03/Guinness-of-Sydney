@@ -6,11 +6,18 @@ import { QUERY_REVIEWS, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 
 const ReviewForm = () => {
-  const [pubName, setPubName] = useState('');
-  const [review, setReview] = useState('');
-  const [score, setScore] = useState('');
-  const [price, setPrice] = useState('');
-  const [location, setLocation] = useState('');
+  const [formState, setFormState] = useState({
+    pubName: '',
+    review: '',
+    score: '',
+    price: '',
+    location: '',
+  })
+  // const [pubName, setPubName] = useState('');
+  // const [review, setReview] = useState('');
+  // const [score, setScore] = useState('');
+  // const [price, setPrice] = useState('');
+  // const [location, setLocation] = useState('');
 
   const [addReview, { error }] = useMutation(ADD_REVIEW, {
     update(cache, { data: { addReview } }) {
@@ -40,24 +47,61 @@ const ReviewForm = () => {
     try {
       const { data } = await addReview({
         variables: {
-          pubName,
-          review,
-          score,
-          price,
-          location
-          thoughtAuthor: Auth.getProfile().data.username,
+          ...formState,
+          reviewer: Auth.getProfile().data.username,
         },
       });
 
-      setThoughtText('');
+      // setPubName('');
+      // setReview('');
+      // setScore('');
+      // setPrice('');
+      // setLocation('');
     } catch (err) {
       console.error(err);
+    }
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    if (name === 'pubName') {
+      setPubName(value);
+    }
+    if (name === 'review') {
+      setReview(value);
     }
   };
 
   return (
     <div className='reviewInput'>
       <h2> Add a Review</h2>
+      {Auth.loggedIn() ? (
+        <>
+          <form
+            className="flex-row justify-center justify-space-between-md align-center"
+            onSubmit={handleFormSubmit}
+          >
+            <div className="col-12 col-lg-9">
+            <textarea
+                name="pubName"
+                placeholder="Pub Name:"
+                value={pubName}
+                className="form-input w-100"
+                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                onChange={handleChange}
+              ></textarea>
+            <textarea
+                name="review"
+                placeholder="Review:"
+                value={review}
+                className="form-input w-100"
+                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                onChange={handleChange}
+              ></textarea>
+            </div>
+          </form>
+        </>
+      )}
       <form>
         <label>Pub</label>
         <input type='text' required />

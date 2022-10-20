@@ -21,6 +21,10 @@ const reviewSchema = new Schema({
     type: String,
     required: true,
   },
+  reviewer: {
+    type: String,
+    required: true,
+  }
 });
 
 const Review = model('Review', reviewSchema);
