@@ -46,17 +46,16 @@ export const QUERY_SINGLE_REVIEW = gql`
 export const QUERY_ME = gql`
   query me {
     me {
+      _id
+      username
+      email
+      reviewCount {
         _id
-        username
-        email
-        reviewCount {
-          _id
-          pubName
-          review
-          score
-          price
-          location
-        }
+        pubName
+        review
+        score
+        price
+        location
       }
     }
   }
