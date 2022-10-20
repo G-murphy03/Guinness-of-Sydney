@@ -64,12 +64,11 @@ const ReviewForm = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    if (name === 'pubName') {
-      setPubName(value);
-    }
-    if (name === 'review') {
-      setReview(value);
-    }
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
   };
 
   return (
@@ -85,7 +84,7 @@ const ReviewForm = () => {
             <textarea
                 name="pubName"
                 placeholder="Pub Name:"
-                value={pubName}
+                value={formstate.pubName}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
@@ -93,35 +92,55 @@ const ReviewForm = () => {
             <textarea
                 name="review"
                 placeholder="Review:"
-                value={review}
+                value={formstate.review}
+                className="form-input w-100"
+                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                onChange={handleChange}
+              ></textarea>
+              <textarea
+                name="review"
+                placeholder="Score (out of 10):"
+                value={formstate.score}
+                className="form-input w-100"
+                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                onChange={handleChange}
+              ></textarea>
+              <textarea
+                name="review"
+                placeholder="Price:"
+                value={formstate.price}
+                className="form-input w-100"
+                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                onChange={handleChange}
+              ></textarea>
+              <textarea
+                name="review"
+                placeholder="Location:"
+                value={formstate.location}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
             </div>
+            
+            <div className="col-12 col-lg-3">
+              <button className="btn btn-primary btn-block py-3" type="submit">
+                Submit Review
+              </button>
+            </div>
+            {error && (
+              <div className="col-12 my-3 bg-danger text-white p-3">
+                {error.message}
+              </div>
+            )}
           </form>
         </>
+      ) : (
+        <p>
+        You need to be logged in to submit a review. Please{' '}
+        <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+        </p>
       )}
-      <form>
-        <label>Pub</label>
-        <input type='text' required />
-
-        <label>Review:</label>
-        <textarea required></textarea>
-
-        <label>Score:</label>
-        <input type='text' required />
-
-        <label>Price:</label>
-        <input type='text' required />
-
-        <label>Location:</label>
-        <input type='text' required />
-
-        <label>Reviewer:</label>
-        <input type='text' required />
-        <button>Submit Review</button>
-      </form>
     </div>
   );
 };
