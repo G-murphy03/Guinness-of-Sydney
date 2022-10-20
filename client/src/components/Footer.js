@@ -6,7 +6,7 @@ function Footer() {
     <div>
       <footer className='footer'>
         <img
-          src={require('../assets/guinness-of-sydney-logo.jpg')}
+          src={require('../assets/guinness-of-sydney-logo.png')}
           className='footer-logo'
           alt='logo'
         ></img>
