@@ -6,7 +6,7 @@ export const QUERY_USER = gql`
       _id
       username
       email
-      reviewCount {
+      reviews {
         _id
         pubName
         review
@@ -20,7 +20,7 @@ export const QUERY_USER = gql`
 
 export const QUERY_REVIEWS = gql`
   query getReviews {
-    reviewCount {
+    reviews {
       _id
       pubName
       review
@@ -49,7 +49,7 @@ export const QUERY_ME = gql`
       _id
       username
       email
-      reviewCount {
+      reviews {
         _id
         pubName
         review

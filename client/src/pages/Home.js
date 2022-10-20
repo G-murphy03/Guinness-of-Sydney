@@ -1,11 +1,11 @@
 import React from 'react';
-import ReviewInputs from '../components/ReviewInputs';
+import ReviewForm from '../components/ReviewForm';
 
 // TODO: Work on CSS
 const Home = () => {
   return (
     <div>
-      <ReviewInputs />
+      <ReviewForm />
       <div className='who-we-are'>
         <h1>Who We Are</h1>
         <img src={require('../assets/guinness-beer.png')} alt='Guinness'></img>

@@ -74,10 +74,11 @@ const resolvers = {
     },
   },
 
-  updateReview: async (parent, { reviewId, pubName, review, score, price, location }, context) => {
+  updateReview: async (parent, { _id, pubName, review, score, price, location }, context) => {
     if (context.user) {
-      return Review.findOneAndUpdate(
-        { _id: reviewId },
+      console.log("something", review);
+      return await Review.findOneAndUpdate(
+        { _id},
         { 
           $addToSet: 
           {

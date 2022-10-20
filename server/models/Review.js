@@ -1,10 +1,6 @@
 const { Schema, model } = require('mongoose');
 
 const reviewSchema = new Schema({
-  reviewer: {
-    type: String,
-    required: true,
-  },
   pubName: {
     type: String,
     required: true,
