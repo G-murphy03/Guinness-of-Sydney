@@ -9,12 +9,12 @@ const typeDefs = gql`
   }
   type Review {
     _id: ID!
-    reviewer: String!
     pubName: String!
     review: String!
     score: Int!
     price: Float!
     location: String!
+    reviewer: String!
   }
   type Auth {
     token: ID!

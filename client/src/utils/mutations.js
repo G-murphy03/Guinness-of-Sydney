@@ -45,6 +45,7 @@ export const ADD_REVIEW = gql`
       score
       price
       location
+      reviewer
     }
   }
 `;
@@ -58,6 +59,7 @@ export const REMOVE_REVIEW = gql`
       score
       price
       location
+      reviewer
     }
   }
 `;
