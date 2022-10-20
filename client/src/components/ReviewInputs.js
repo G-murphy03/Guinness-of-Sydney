@@ -22,7 +22,7 @@ const ReviewInputs = () => {
 
         <label>Reviewer:</label>
         <input type='text' required />
-        <button>Add button</button>
+        <button>Submit Review</button>
       </form>
     </div>
   );
