@@ -7,12 +7,16 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import Container from 'react-bootstrap/Container';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Location from './pages/Location';
+//import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Reviews from './pages/Reviews';
 
 const httpLink = createHttpLink({

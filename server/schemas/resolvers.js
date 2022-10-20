@@ -72,47 +72,45 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-  },
 
-  updateReview: async (parent, { reviewId, pubName, review, score, price, location }, context) => {
-    if (context.user) {
-      return Review.findOneAndUpdate(
-        { _id: reviewId },
-        { 
-          $addToSet: 
-          {
-          pubName,
-          review,
-          score,
-          price,
-          location,
-          reviewer: context.user.username,
-          }
-        },
-        {
-          new: true,
-        }
-      );
-    }
-    throw new AuthenticationError('You need to be logged in!');
-  },
+    updateReview: async (parent, {reviewId, pubName, review, score, price, location, reviewer}, context) => {
+        if (context.user) {
+          return Review.findByIdAndUpdate(
+            { _id: reviewId },
+            { 
+              $addToSet: 
+              {
+              pubName,
+              review,
+              score,
+              price,
+              location,
+              reviewer: context.user.username,
+              }
+            },
+            {
+              new: true,
+            }
+          );
+        };
+        throw new AuthenticationError('You need to be logged in!');
+    },
+    removeReview: async(parent, { reviewId }, context) => {
+        if (context.user) {
+          const beerReview = await Review.findOneAndDelete({
+            _id: reviewId,
+            reviewer: context.user.username,
+          });
 
-  removeReview: async(parent, { reviewId }, context) => {
-    if (context.user) {
-      const beerReview = await Review.findOneAndDelete({
-        _id: reviewId,
-        reviewer: context.user.username,
-      });
-
-      await User.findOneAndUpdate(
-        { _id: context.user._id },
-        { $pull: { reviews: review._id } }
-      );
-
-      return beerReview;
-    }
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { reviews: review._id } }
+        );
+        return beerReview;
+    };
     throw new AuthenticationError('You need to be logged in!');
   }
+  },
 };
 
 module.exports = resolvers;
