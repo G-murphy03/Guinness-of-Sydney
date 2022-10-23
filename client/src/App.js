@@ -19,6 +19,7 @@ import Location from './pages/Location';
 import Reviews from './pages/Reviews';
 //import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ReviewInput from './pages/ReviewInput.js';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -54,6 +55,7 @@ function App() {
                 <Route path='/reviews' element={<Reviews />} />
                 <Route path='/locations' element={<Location />} />
                 <Route path='/reviews' element={<Reviews />} />
+                <Route path='/reviewInput' element={<ReviewInput />} />
               </Routes>
             </div>
           </Container>
