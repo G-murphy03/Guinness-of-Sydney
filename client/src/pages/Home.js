@@ -1,17 +1,16 @@
 import React from 'react';
-// import ReviewForm from '../components/ReviewForm';
-
+import ReviewForm from '../components/ReviewForm';
 
 const Home = () => {
   return (
     <div>
-      {/* <ReviewForm /> */}
-      <div className="who-we-are">
+      {<ReviewForm />}
+      <div className='who-we-are'>
         <h1>Who We Are</h1>
-        <div className="who-we-are-content">
+        <div className='who-we-are-content'>
           <img
-            src={require("../assets/guinness-beer.png")}
-            alt="Guinness"
+            src={require('../assets/guinness-beer.png')}
+            alt='Guinness'
           ></img>
           <p>
             Guinness of Sydney serves to review beers in pubs all over Sydney.
@@ -21,10 +20,10 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="the-perfect-pour">
+      <div className='the-perfect-pour'>
         <h1>The Perfect Pour</h1>
-        <div className="step-one">
-          <img src={require("../assets/step-one.png")} alt=""></img>
+        <div className='step-one'>
+          <img src={require('../assets/step-one.png')} alt=''></img>
           <p>
             <h3>Step One</h3>
             What does it take to create the perfect pour? Well, first you must
@@ -32,33 +31,33 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="step-two">
+        <div className='step-two'>
           <p>
             <h3>Step Two</h3>
             Tilt the glass. A good Guinness starts at an angle of 45 degrees.
             Now pour until the glass reaches about 3/4 full.
           </p>
-          <img src={require("../assets/step-two.jpg")} alt=""></img>
+          <img src={require('../assets/step-two.jpg')} alt=''></img>
         </div>
 
-        <div className="step-three">
-          <img src={require("../assets/step-three.png")} alt=""></img>
+        <div className='step-three'>
+          <img src={require('../assets/step-three.png')} alt=''></img>
           <p>
             <h3>Step Three</h3>
             Now let it settle. Resist your temptation to drink. But only for a
             ninety-two and a half seconds.
           </p>
         </div>
-        <div className="step-four">
+        <div className='step-four'>
           <p>
             <h3>Step Four</h3>
             The glass isn't full yet. Time to top up.
           </p>
-          <img src={require("../assets/step-four.jpg")} alt=""></img>
+          <img src={require('../assets/step-four.jpg')} alt=''></img>
         </div>
 
-        <div className="step-five">
-          <img src={require("../assets/step-five.jpg")} alt=""></img>
+        <div className='step-five'>
+          <img src={require('../assets/step-five.jpg')} alt=''></img>
           <p>
             <h3>Step Five</h3>
             Perfection.
@@ -66,14 +65,13 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="quote">
-        <img src={require("../assets/flann-pic.jpg")} alt=""></img>
+      <div className='quote'>
+        <img src={require('../assets/flann-pic.jpg')} alt=''></img>
         <p>
           "In time of trouble and lousey strife, <br />
-          You have still got a darlint plan  <br />
+          You have still got a darlint plan <br />
           You still can turn to a brighter life – <br />
-          A pint of plain is your only man." <br />
-          ~ Flann O'Brien
+          A pint of plain is your only man." <br />~ Flann O'Brien
         </p>
       </div>
     </div>
