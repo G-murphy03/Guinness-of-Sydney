@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client'
-import { ADD_REVIEW } from '../../utils/mutations';
+import { ADD_REVIEW } from '../utils/mutations';
 import { QUERY_REVIEWS, QUERY_ME } from '../utils/queries';
+import { Link } from 'react-router-dom';
 
 import Auth from '../utils/auth';
 
 const ReviewForm = () => {
-  const [formState, setFormState] = useState({
-    pubName: '',
-    review: '',
-    score: '',
-    price: '',
-    location: '',
-  })
-  // const [pubName, setPubName] = useState('');
-  // const [review, setReview] = useState('');
-  // const [score, setScore] = useState('');
-  // const [price, setPrice] = useState('');
-  // const [location, setLocation] = useState('');
+  // const [formState, setFormState] = useState({
+  //   pubName: '',
+  //   review: '',
+  //   score: '',
+  //   price: '',
+  //   location: '',
+  // })
+  const [pubName, setPubName] = useState('');
+  const [review, setReview] = useState('');
+  const [score, setScore] = useState('');
+  const [price, setPrice] = useState('');
+  const [location, setLocation] = useState('');
 
   const [addReview, { error }] = useMutation(ADD_REVIEW, {
     update(cache, { data: { addReview } }) {
@@ -47,29 +48,65 @@ const ReviewForm = () => {
     try {
       const { data } = await addReview({
         variables: {
-          ...formState,
+          // ...formState,
+          pubName,
+          review,
+          score,
+          price,
+          location,
           reviewer: Auth.getProfile().data.username,
         },
       });
 
-      // setPubName('');
-      // setReview('');
-      // setScore('');
-      // setPrice('');
-      // setLocation('');
+      setPubName('');
+      setReview('');
+      setScore('');
+      setPrice('');
+      setLocation('');
     } catch (err) {
       console.error(err);
     }
   };
 
-  const handleChange = (event) => {
+  const handlePubNameChange = (event) => {
     const { name, value } = event.target;
-
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
+    if (name === 'pubName') {
+      setPubName(value);
+    }
+    // setFormState({
+    //   ...formState,
+    //   [name]: value,
+    // });
   };
+
+  const handleReviewChange = (event) => {
+    const { name, value } = event.target;
+    if (name === 'review') {
+      setReview(value);
+    }
+  };
+
+  const handleScoreChange = (event) => {
+    const { name, value } = event.target;
+    if (name === 'score') {
+      setScore(value);
+    }
+  };
+  
+  const handlePriceChange = (event) => {
+    const { name, value } = event.target;
+    if (name === 'price') {
+      setPrice(value);
+    }
+  };
+
+  const handleLocationChange = (event) => {
+    const { name, value } = event.target;
+    if (name === 'location') {
+      setLocation(value);
+    }
+  };
+  
 
   return (
     <div className='reviewInput'>
@@ -84,42 +121,42 @@ const ReviewForm = () => {
             <textarea
                 name="pubName"
                 placeholder="Pub Name:"
-                value={formstate.pubName}
+                value={pubName}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
-                onChange={handleChange}
+                onChange={handlePubNameChange}
               ></textarea>
             <textarea
                 name="review"
                 placeholder="Review:"
-                value={formstate.review}
+                value={review}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
-                onChange={handleChange}
+                onChange={handleReviewChange}
               ></textarea>
               <textarea
-                name="review"
+                name="score"
                 placeholder="Score (out of 10):"
-                value={formstate.score}
+                value={score}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
-                onChange={handleChange}
+                onChange={handleScoreChange}
               ></textarea>
               <textarea
-                name="review"
+                name="price"
                 placeholder="Price:"
-                value={formstate.price}
+                value={price}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
-                onChange={handleChange}
+                onChange={handlePriceChange}
               ></textarea>
               <textarea
-                name="review"
+                name="location"
                 placeholder="Location:"
-                value={formstate.location}
+                value={location}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
-                onChange={handleChange}
+                onChange={handleLocationChange}
               ></textarea>
             </div>
             
