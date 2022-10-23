@@ -57,6 +57,18 @@
   border-radius: 50%;
 }
 
+.card-holder {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.login-card,
+.signup-card {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
 .main-container {
   background-image: linear-gradient(to bottom, var(--lemoncholy) 5%, var(--sea-sponge) 6%, var(--dark-steel) 15%, var(--nutrient-soil) 19%, var(--black) 20%);
   color: white;

@@ -41,14 +41,14 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
+    <main className="flex-row">
+      <div className='card-holder'>
+        <div className="card login-card">
+          <h4 className="card-header bg-dark text-light p-2 text-center">Login</h4>
           <div className="card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
+                Success! You may now head{" "}
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
@@ -69,9 +69,10 @@ const Login = (props) => {
                   value={formState.password}
                   onChange={handleChange}
                 />
+                <br/>
                 <button
                   className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                   type="submit"
                 >
                   Submit
