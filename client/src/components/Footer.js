@@ -1,18 +1,21 @@
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
 // TODO: Work on CSS
 function Footer() {
   return (
-    <div>
-      <footer className='footer'>
-        <img
-          src={require('../assets/guinness-of-sydney-logo.jpg')}
-          className='footer-logo'
-          alt='logo'
-        ></img>
-        <p className='footer-text'>Guinness of Sydney</p>
-      </footer>
-    </div>
+    <Container className='footer'>
+      <Row>
+        <Col>
+          <img
+            src={require('../assets/guinness-of-sydney-logo.png')}
+            className='footer-logo'
+            alt='logo'
+          />
+          <p className='footer-text'>Guinness of Sydney ©2022</p>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
