@@ -39,6 +39,7 @@ export const ADD_REVIEW = gql`
       price: $price
       location: $location
     ) {
+      _id
       pubName
       review
       score
