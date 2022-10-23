@@ -6,15 +6,17 @@
   --nutrient-soil: #180000;
 }
 
-.who-we-are {
+.who-we-are,
+.the-perfect-pour {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-self: flex-start;
-  align-items: flex-start;
+  align-items: center;
+  padding-top: 25px;
 }
 
-.who-we-are h1, .the-perfect-pour h1 {
+.who-we-are h1,
+.the-perfect-pour h1 {
   font-size: 60px;
   flex-wrap: wrap;
   align-self: center;
@@ -25,23 +27,34 @@
 .step-two,
 .step-three,
 .step-four,
-.step-five {
+.step-five,
+.quote {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   text-align: center;
   align-items: center;
+  padding-top: 40px;
 }
 
-.who-we-are-content img {
-  width: 40%;
+.who-we-are-content img,
+.step-one img,
+.step-two img,
+.step-three img,
+.step-four img,
+.step-five img {
+  width: 30%;
 }
 
-.the-perfect-pour {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-self: flex-start;
-  align-items: flex-start;
+.quote {
+  padding-top: 60px;
+}
+
+.quote p {
+  font-style: italic;
+}
+
+.quote img {
+  border-radius: 50%;
 }
 
 .main-container {

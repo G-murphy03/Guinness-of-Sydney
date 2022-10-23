@@ -26,6 +26,7 @@ const Home = () => {
         <div className="step-one">
           <img src={require("../assets/step-one.png")} alt=""></img>
           <p>
+            <h3>Step One</h3>
             What does it take to create the perfect pour? Well, first you must
             prepare a glass. A nice, tall Guinness glass is best.
           </p>
@@ -33,6 +34,7 @@ const Home = () => {
 
         <div className="step-two">
           <p>
+            <h3>Step Two</h3>
             Tilt the glass. A good Guinness starts at an angle of 45 degrees.
             Now pour until the glass reaches about 3/4 full.
           </p>
@@ -42,27 +44,36 @@ const Home = () => {
         <div className="step-three">
           <img src={require("../assets/step-three.png")} alt=""></img>
           <p>
+            <h3>Step Three</h3>
             Now let it settle. Resist your temptation to drink. But only for a
             ninety-two and a half seconds.
           </p>
         </div>
         <div className="step-four">
-          <p>The glass isn't full yet. Time to top up.</p>
+          <p>
+            <h3>Step Four</h3>
+            The glass isn't full yet. Time to top up.
+          </p>
           <img src={require("../assets/step-four.jpg")} alt=""></img>
         </div>
 
         <div className="step-five">
           <img src={require("../assets/step-five.jpg")} alt=""></img>
-          <p>Perfection.</p>
+          <p>
+            <h3>Step Five</h3>
+            Perfection.
+          </p>
         </div>
       </div>
 
       <div className="quote">
         <img src={require("../assets/flann-pic.jpg")} alt=""></img>
         <p>
-          "In time of trouble and lousey strife, You have still got a darlint
-          plan You still can turn to a brighter life – A pint of plain is your
-          only man." ~ Flann O'Brien
+          "In time of trouble and lousey strife, <br />
+          You have still got a darlint plan  <br />
+          You still can turn to a brighter life – <br />
+          A pint of plain is your only man." <br />
+          ~ Flann O'Brien
         </p>
       </div>
     </div>
