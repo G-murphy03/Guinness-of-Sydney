@@ -6,7 +6,7 @@ export const QUERY_USER = gql`
       _id
       username
       email
-      reviewCount {
+      reviews {
         _id
         pubName
         review
@@ -27,6 +27,7 @@ export const QUERY_REVIEWS = gql`
       score
       price
       location
+      reviewer
     }
   }
 `;
@@ -39,6 +40,7 @@ export const QUERY_SINGLE_REVIEW = gql`
       score
       price
       location
+      reviewer
     }
   }
 `;
@@ -49,13 +51,14 @@ export const QUERY_ME = gql`
       _id
       username
       email
-      reviewCount {
+      reviews {
         _id
         pubName
         review
         score
         price
         location
+        reviewer
       }
     }
   }

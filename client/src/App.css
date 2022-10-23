@@ -1,6 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 .App {
   text-align: center;
 }
+body {
+  background-color: #000;
+  color:white;
+  font-family: 'Roboto Slab', serif;
+ }
+
+ .iframe{
+  width: 70vh;
+  height: 70vh;
+ }
+
+ .footer{
+  display: flex;
+  justify-content: center;
+
+ }
+ .footer-text{
+  font-size: 1vw;
+  display:inline-block;
+  vertical-align: middle
+ }
+
+ .footer-logo {
+  width: 10vh;
+  display:inline-block; 
+  align: center;
+  vertical-align: middle;
+ }
 
 .App-logo {
   height: 40vmin;

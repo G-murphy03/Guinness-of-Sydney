@@ -6,25 +6,45 @@
   --nutrient-soil: #180000;
 }
 
-.who-we-are{
+.who-we-are {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-self: flex-start;
+  align-items: flex-start;
 }
 
-.who-we-are img {
-  align-self: flex-end;
-  width: 20%;
-}
-
-.who-we-are p {
-  align-self: flex-end;
-}
-
-.who-we-are h1{
+.who-we-are h1, .the-perfect-pour h1 {
   font-size: 60px;
+  flex-wrap: wrap;
+  align-self: center;
 }
 
-main {
+.who-we-are-content,
+.step-one,
+.step-two,
+.step-three,
+.step-four,
+.step-five {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  align-items: center;
+}
+
+.who-we-are-content img {
+  width: 40%;
+}
+
+.the-perfect-pour {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.main-container {
   background-image: linear-gradient(to bottom, var(--lemoncholy) 5%, var(--sea-sponge) 6%, var(--dark-steel) 15%, var(--nutrient-soil) 19%, var(--black) 20%);
   color: white;
 }

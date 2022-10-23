@@ -1,10 +1,6 @@
 const { Schema, model } = require('mongoose');
 
 const reviewSchema = new Schema({
-  reviewer: {
-    type: String,
-    required: true,
-  },
   pubName: {
     type: String,
     required: true,
@@ -25,6 +21,10 @@ const reviewSchema = new Schema({
     type: String,
     required: true,
   },
+  reviewer: {
+    type: String,
+    required: true,
+  }
 });
 
 const Review = model('Review', reviewSchema);
