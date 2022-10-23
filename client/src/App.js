@@ -56,8 +56,8 @@ function App() {
                 <Route path='/reviews' element={<Reviews />} />
               </Routes>
             </div>
-            <Footer />
           </Container>
+          <Footer />
         </div>
       </Router>
     </ApolloProvider>
