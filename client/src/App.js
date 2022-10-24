@@ -60,8 +60,8 @@ function App() {
               </Routes>
             </div>
           </Container>
-          <Footer />
         </div>
+        <Footer />
       </Router>
     </ApolloProvider>
   );

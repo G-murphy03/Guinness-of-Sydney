@@ -48,7 +48,6 @@ Guinness of Sydney serves as a platform for enthusiasts of the stout, to come to
 ## TECHNOLOGIES USED
 
     NODE.JS
-    HTML
     CSS
     JAVASCRIPT
     GRAPHQL
