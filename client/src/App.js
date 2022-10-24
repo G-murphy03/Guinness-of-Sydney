@@ -49,15 +49,16 @@ function App() {
           <Container>
             <div>
               <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/login' element={<Login />} />
-                <Route path='/signup' element={<Signup />} />
-                <Route path='/profile' element={<Profile />} />
-                <Route path='/reviews' element={<Reviews />} />
-                <Route path='/locations' element={<Location />} />
-                <Route path='/reviews' element={<Reviews />} />
-                <Route path='/reviewInput' element={<ReviewInput />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/reviews" element={<Reviews />} />
+                <Route path="/locations" element={<Location />} />
+                <Route path="/reviews" element={<Reviews />} />
+                <Route path="/reviewInput" element={<ReviewInput />} />
               </Routes>
+              <Footer />
             </div>
           </Container>
         </div>

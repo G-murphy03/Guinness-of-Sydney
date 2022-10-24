@@ -4,6 +4,7 @@ import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
+import { Container } from 'react-bootstrap';
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -41,18 +42,18 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
+    <Container>
+      <div className='card-holder'>
+        <div className="card login-card">
+          <h4 className="card-header bg-dark text-light p-2 text-center">Login</h4>
           <div className="card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
+                Success! You may now head{" "}
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={handleFormSubmit} className='login-form'>
                 <input
                   className="form-input"
                   placeholder="Your email"
@@ -61,6 +62,7 @@ const Login = (props) => {
                   value={formState.email}
                   onChange={handleChange}
                 />
+                <br />
                 <input
                   className="form-input"
                   placeholder="******"
@@ -69,9 +71,10 @@ const Login = (props) => {
                   value={formState.password}
                   onChange={handleChange}
                 />
+                <br/>
                 <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
+                  className="btn btn-block btn-dark"
+                  style={{ cursor: "pointer" }}
                   type="submit"
                 >
                   Submit
@@ -87,7 +90,7 @@ const Login = (props) => {
           </div>
         </div>
       </div>
-    </main>
+      </Container>
   );
 };
 
