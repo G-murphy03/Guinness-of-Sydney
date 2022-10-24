@@ -9,7 +9,6 @@ const Reviews = ({ reviews }) => {
       {reviews &&
         reviews.map((review) => (
           <CardGroup key={review._id}>
-            <Card.Img src />
             <Card.Body className='card mb-3'>
               <Card.Title className='pub-name' bg='dark'>
                 Pub Name: {review.pubName}

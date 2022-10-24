@@ -22,44 +22,50 @@ const Home = () => {
         <h1>The Perfect Pour</h1>
         <div className='step-one'>
           <img src={require('../assets/step-one.png')} alt=''></img>
-          <p>
+          <div>
             <h3>Step One</h3>
-            What does it take to create the perfect pour? Well, first you must
-            prepare a glass. A nice, tall Guinness glass is best.
-          </p>
+            <p>
+              What does it take to create the perfect pour? Well, first you must
+              prepare a glass. A nice, tall Guinness glass is best.
+            </p>
+          </div>
         </div>
 
         <div className='step-two'>
-          <p>
+          <div>
             <h3>Step Two</h3>
-            Tilt the glass. A good Guinness starts at an angle of 45 degrees.
-            Now pour until the glass reaches about 3/4 full.
-          </p>
+            <p>
+              Tilt the glass. A good Guinness starts at an angle of 45 degrees.
+              Now pour until the glass reaches about 3/4 full.
+            </p>
+          </div>
           <img src={require('../assets/step-two.jpg')} alt=''></img>
         </div>
 
         <div className='step-three'>
           <img src={require('../assets/step-three.png')} alt=''></img>
-          <p>
+          <div>
             <h3>Step Three</h3>
-            Now let it settle. Resist your temptation to drink. But only for a
-            ninety-two and a half seconds.
-          </p>
+            <p>
+              Now let it settle. Resist your temptation to drink. But only for a
+              ninety-two and a half seconds.
+            </p>
+          </div>
         </div>
         <div className='step-four'>
-          <p>
+          <div>
             <h3>Step Four</h3>
-            The glass isn't full yet. Time to top up.
-          </p>
+            <p>The glass isn't full yet. Time to top up.</p>
+          </div>
           <img src={require('../assets/step-four.jpg')} alt=''></img>
         </div>
 
         <div className='step-five'>
           <img src={require('../assets/step-five.jpg')} alt=''></img>
-          <p>
+          <div>
             <h3>Step Five</h3>
-            Perfection.
-          </p>
+            <p>Perfection.</p>
+          </div>
         </div>
       </div>
 
