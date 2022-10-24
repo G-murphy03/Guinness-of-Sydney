@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 
+// reviewSchema define the shape of the documents within the collection.
 const reviewSchema = new Schema({
   pubName: {
     type: String,
@@ -27,6 +28,7 @@ const reviewSchema = new Schema({
   }
 });
 
+// Models are constructors compiled from a schema and pass down the properties and methods to each instance
 const Review = model('Review', reviewSchema);
 
 module.exports = Review;

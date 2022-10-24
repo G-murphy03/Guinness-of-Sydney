@@ -1,7 +1,9 @@
 const express = require('express');
+// Import the ApolloServer class
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 const { authMiddleware } = require('./utils/auth');
+// Import the two parts of a GraphQL schema
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
@@ -24,6 +26,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
+// Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
   server.applyMiddleware({ app });
@@ -38,4 +41,5 @@ const startApolloServer = async (typeDefs, resolvers) => {
   });
 };
 
+// Call the async function to start the server
 startApolloServer(typeDefs, resolvers);
