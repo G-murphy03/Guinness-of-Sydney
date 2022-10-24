@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useMutation } from '@apollo/client'
+import { useMutation } from '@apollo/client';
 import { ADD_REVIEW } from '../utils/mutations';
 import { QUERY_REVIEWS, QUERY_ME } from '../utils/queries';
 import { Link } from 'react-router-dom';
@@ -22,7 +22,7 @@ const ReviewForm = () => {
 
   const [addReview, { error }] = useMutation(ADD_REVIEW, {
     update(cache, { data: { addReview } }) {
-      try {
+      /* try {
         const { reviews } = cache.readQuery({ query: QUERY_REVIEWS });
 
         cache.writeQuery({
@@ -38,7 +38,7 @@ const ReviewForm = () => {
       cache.writeQuery({
         query: QUERY_ME,
         data: { me: { ...me, reviews: [...me.reviews, addReview] } },
-      });
+      });*/
     },
   });
 
@@ -51,8 +51,8 @@ const ReviewForm = () => {
           // ...formState,
           pubName,
           review,
-          score,
-          price,
+          score: parseInt(score, 10),
+          price: parseFloat(price),
           location,
           reviewer: Auth.getProfile().data.username,
         },
@@ -92,7 +92,7 @@ const ReviewForm = () => {
       setScore(value);
     }
   };
-  
+
   const handlePriceChange = (event) => {
     const { name, value } = event.target;
     if (name === 'price') {
@@ -106,7 +106,6 @@ const ReviewForm = () => {
       setLocation(value);
     }
   };
-  
 
   return (
     <div className='reviewInput'>
@@ -114,59 +113,59 @@ const ReviewForm = () => {
       {Auth.loggedIn() ? (
         <>
           <form
-            className="flex-row justify-center justify-space-between-md align-center"
+            className='flex-row justify-center justify-space-between-md align-center'
             onSubmit={handleFormSubmit}
           >
-            <div className="col-12 col-lg-9">
-            <textarea
-                name="pubName"
-                placeholder="Pub Name:"
+            <div className='col-12 col-lg-9'>
+              <textarea
+                name='pubName'
+                placeholder='Pub Name:'
                 value={pubName}
-                className="form-input w-100"
+                className='form-input w-100'
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handlePubNameChange}
               ></textarea>
-            <textarea
-                name="review"
-                placeholder="Review:"
+              <textarea
+                name='review'
+                placeholder='Review:'
                 value={review}
-                className="form-input w-100"
+                className='form-input w-100'
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleReviewChange}
               ></textarea>
               <textarea
-                name="score"
-                placeholder="Score (out of 10):"
+                name='score'
+                placeholder='Score (out of 10):'
                 value={score}
-                className="form-input w-100"
+                className='form-input w-100'
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleScoreChange}
               ></textarea>
               <textarea
-                name="price"
-                placeholder="Price:"
+                name='price'
+                placeholder='Price:'
                 value={price}
-                className="form-input w-100"
+                className='form-input w-100'
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handlePriceChange}
               ></textarea>
               <textarea
-                name="location"
-                placeholder="Location:"
+                name='location'
+                placeholder='Location:'
                 value={location}
-                className="form-input w-100"
+                className='form-input w-100'
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleLocationChange}
               ></textarea>
             </div>
-            
-            <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+
+            <div className='col-12 col-lg-3'>
+              <button className='btn btn-primary btn-block py-3' type='submit'>
                 Submit Review
               </button>
             </div>
             {error && (
-              <div className="col-12 my-3 bg-danger text-white p-3">
+              <div className='col-12 my-3 bg-danger text-white p-3'>
                 {error.message}
               </div>
             )}
@@ -174,8 +173,8 @@ const ReviewForm = () => {
         </>
       ) : (
         <p>
-        You need to be logged in to submit a review. Please{' '}
-        <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+          You need to be logged in to submit a review. Please{' '}
+          <Link to='/login'>login</Link> or <Link to='/signup'>signup.</Link>
         </p>
       )}
     </div>

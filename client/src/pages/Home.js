@@ -1,10 +1,8 @@
 import React from 'react';
-import ReviewForm from '../components/ReviewForm';
 
 const Home = () => {
   return (
     <div>
-      {<ReviewForm />}
       <div className='who-we-are'>
         <h1>Who We Are</h1>
         <div className='who-we-are-content'>
