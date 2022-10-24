@@ -18,6 +18,8 @@
 
 [8. COLLABORATORS](#COLLABORATORS)
 
+[9. DEPLOYED APPLICATION](#DEPLOYEDAPPLICATION)
+
 <a id="DESCRIPTION"></a>
 
 ## DESCRIPTION
@@ -76,3 +78,9 @@ Guinness of Sydney serves as a platform for enthusiasts of the stout, to come to
 [George's Profile](https://github.com/G-murphy03) <br>
 [Ghassan's Profile](https://github.com/ghassanalassadi) <br>
 [Michael's Profile](https://github.com/michaelclancy90) <br>
+
+<a id="DEPLOYEDAPPLICATION"></a>
+
+## DEPLOYED APPLICATION
+
+    https://guinness-of-sydney.herokuapp.com/
