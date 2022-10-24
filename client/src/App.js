@@ -17,7 +17,7 @@ import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Location from './pages/Location';
 import Reviews from './pages/Reviews';
-//import Navbar from './components/Navbar';
+import Nav from './components/Navbar';
 import Footer from './components/Footer';
 import ReviewInput from './pages/ReviewInput.js';
 
@@ -45,6 +45,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className='main-container'>
+          <Nav />
           <Container>
             <div>
               <Routes>

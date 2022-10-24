@@ -66,3 +66,26 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.nav {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 20px;
+  float: right;
+}
+
+.logo {
+  height: 150px;
+}
+
+.links {
+  text-decoration: none;
+  color: white;
+}
