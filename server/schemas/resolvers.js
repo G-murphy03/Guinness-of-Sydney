@@ -20,6 +20,7 @@ const resolvers = {
       return Review.find();
     },
     
+     // By adding context to our query, we can retrieve the logged in user without specifically searching for them
     me: async (parent, arg, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id });
@@ -73,7 +74,9 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
 
+    // Add a third argument to the resolver to access data in our `context`
     updateReview: async (parent, {reviewId, pubName, review, score, price, location, reviewer}, context) => {
+        // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
         if (context.user) {
           return Review.findByIdAndUpdate(
             { _id: reviewId },
@@ -93,8 +96,10 @@ const resolvers = {
             }
           );
         };
+        // If user attempts to execute this mutation and isn't logged in, throw an error
         throw new AuthenticationError('You need to be logged in!');
     },
+    // Set up mutation so a logged in user can only remove their reviews and no one else's
     removeReview: async(parent, { reviewId }, context) => {
         if (context.user) {
           const beerReview = await Review.findOneAndDelete({

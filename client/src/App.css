@@ -16,6 +16,14 @@ body {
   --dark-steel: #181818;
   --nutrient-soil: #180000;
 }
+.iframe{
+  width: 70vh;
+  height: 70vh;
+}
+
+.card{
+  background-color: #000;
+}
 
 .who-we-are,
 .the-perfect-pour {
@@ -198,4 +206,27 @@ footer{
   to {
     transform: rotate(360deg);
   }
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.nav {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 20px;
+  float: right;
+}
+
+.logo {
+  height: 150px;
+}
+
+.links {
+  text-decoration: none;
+  color: white;
 }
