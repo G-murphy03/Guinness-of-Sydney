@@ -9,7 +9,7 @@ const Reviews = () => {
 
     return (
         <main>
-            <div>
+            <div className='reviews-page'>
                 {
                     loading ? (
                         <div>Loading...</div>

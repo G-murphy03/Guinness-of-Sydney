@@ -39,7 +39,6 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row">
       <div className="card-holder">
         <div className="card signup-card">
           <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
@@ -96,7 +95,6 @@ const Signup = () => {
           </div>
         </div>
       </div>
-    </main>
   );
 };
 
