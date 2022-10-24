@@ -13,6 +13,10 @@ body {
   width: 70vh;
   height: 70vh;
  }
+ 
+ .card{
+  background-color: #000;
+ }
 
  .footer{
   display: flex;
