@@ -1,9 +1,10 @@
 import React from 'react';
 import ReviewForm from '../components/ReviewForm';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
-    <div>
+    <div className='home'>
       {<ReviewForm />}
       <div className='who-we-are'>
         <h1>Who We Are</h1>

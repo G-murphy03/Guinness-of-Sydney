@@ -46,11 +46,11 @@ const Signup = () => {
           <div className="card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
+                Success! You may now head{" "}
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={handleFormSubmit} className='signup-form'>
                 <input
                   className="form-input"
                   placeholder="Your username"
@@ -59,6 +59,7 @@ const Signup = () => {
                   value={formState.name}
                   onChange={handleChange}
                 />
+                <br />
                 <input
                   className="form-input"
                   placeholder="Your email"
@@ -67,6 +68,7 @@ const Signup = () => {
                   value={formState.email}
                   onChange={handleChange}
                 />
+                <br />
                 <input
                   className="form-input"
                   placeholder="******"
@@ -75,10 +77,10 @@ const Signup = () => {
                   value={formState.password}
                   onChange={handleChange}
                 />
-                <br/>
+                <br />
                 <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
+                  className="btn btn-block btn-dark"
+                  style={{ cursor: "pointer" }}
                   type="submit"
                 >
                   Submit
