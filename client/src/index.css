@@ -60,6 +60,10 @@
 .main-container {
   background-image: linear-gradient(to bottom, var(--lemoncholy) 5%, var(--sea-sponge) 6%, var(--dark-steel) 15%, var(--nutrient-soil) 19%, var(--black) 20%);
   color: white;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 
 body {
