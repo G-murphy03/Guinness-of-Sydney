@@ -22,7 +22,7 @@ body {
 }
 
 .card{
-  background-color: #000;
+  background-color: var(--dark-steel);
 }
 
 .who-we-are,
@@ -126,6 +126,10 @@ body {
 
 .locations-header {
   font-size: 40px;
+}
+
+.reviews-page {
+  height: 100vh;
 }
 
 .locations-page {
