@@ -1,7 +1,8 @@
 import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
+import { useMutation } from '@apollo/client';
+import { REMOVE_REVIEW } from '../utils/mutations';
 import { useQuery } from '@apollo/client';
-
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import ReviewList from '../components/ReviewList';
 import ReviewForm from '../components/ReviewForm';
@@ -25,6 +26,8 @@ const Profile = () => {
     return <div>Loading...</div>;
   }
 
+  const [removeReview, { loading: deleting, error: deleteError }] = useMutation(REMOVE_REVIEW);
+
   return (
     <div>
       <div className='flex-row justify-center mb-3'>
@@ -34,8 +37,8 @@ const Profile = () => {
 
         <div className='col-12 col-md-10 mb-5'>
           <ReviewList
-            thoughts={user.thoughts}
-            title={`${user.username}'s thoughts...`}
+            review={user.review.pubName}
+            title={`${user.username}'s reviews...`}
             showTitle={false}
             showUsername={false}
           />
@@ -51,6 +54,7 @@ const Profile = () => {
       </div>
     </div>
   );
-};
+}
+
 
 export default Profile;
