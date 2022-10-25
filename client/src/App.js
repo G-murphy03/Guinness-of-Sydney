@@ -13,7 +13,6 @@ import './App.css';
 
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Location from './pages/Location';
 import Reviews from './pages/Reviews';
@@ -52,7 +51,6 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
-                <Route path="/profile" element={<Profile />} />
                 <Route path="/reviews" element={<Reviews />} />
                 <Route path="/locations" element={<Location />} />
                 <Route path="/reviews" element={<Reviews />} />
